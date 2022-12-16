@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>{{ medicine.title }}</h1>
+    <img src="{{ medicine.image.url }}" alt="">
+    <h1>{{ medicine.description }}</h1>
+    <h1>{{ medicine.price }}</h1>
+    <h1>{{ medicine.created_date }}</h1>
+    <h1>{{ medicine.updated_date }}</h1>
+{% endblock %}

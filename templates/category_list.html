@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <style type="text/css">
+        .category {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-left: 10%;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+    </style>
+    <div class="category">
+        {% for cat in category %}
+            <img src="{{ cat.image.url }}" alt="" width="40%">
+        
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <a href="{{cat.id }}"><h6 class="card-subtitle">{{ cat.category_name }}</h6></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

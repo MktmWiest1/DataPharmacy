@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>{{ category.category_name }}</h1>
+    <div>
+        {% for medicine in medicines %}
+            
+            <h4>{{ medicine.title }}</h4>
+            <h4>{{ medicine.image }}</h4>
+            <h4>{{ medicine.description }}</h4>
+            <h4>{{ medicine.price }}</h4>
+            <h4>{{ medicine.created_date }}</h4>
+            <a href="/medicine/{{ medicine.id }}/"><img src="{{ medicine.image.url }}" alt="" width="30%"></a>
+        {% endfor %}
+    </div>
+{% endblock %}
