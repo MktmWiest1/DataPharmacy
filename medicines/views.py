@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from medicines.models import Category, Medicine
 
 
@@ -7,6 +8,7 @@ def category_list_view(request):
         "category": Category.objects.all()
         }
     return render(request, "category_list.html", context)
+
 
 def category_detail_view(request, **kwargs):
     category = Category.objects.get(id=kwargs["id"])
@@ -23,3 +25,8 @@ def detail_medicine_view(request, **kwargs):
     return render(request, "medicine_detail.html", context={
         "medicine": medicine
         })
+
+
+def home(request):
+    return render(request, "index.html")
+

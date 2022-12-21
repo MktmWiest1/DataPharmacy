@@ -11,10 +11,8 @@
             padding: 10px;
         }
     </style>
-    <div class="category">
+    <div class="category" style="background-color: #80D197">
         {% for cat in category %}
-            <img src="{{ cat.image.url }}" alt="" width="40%">
-        
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <a href="{{cat.id }}"><h6 class="card-subtitle">{{ cat.category_name }}</h6></a>
