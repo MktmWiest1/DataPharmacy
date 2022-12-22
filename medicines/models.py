@@ -19,3 +19,4 @@ class Medicine(models.Model):
         return self.title
 
 
+
